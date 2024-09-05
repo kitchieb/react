@@ -1,0 +1,13 @@
+#filters button {
+    margin-right: 10px;
+}
+
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 1em;
+}
+
+.masonry-gallery img {
+    width: 100%;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,66 @@
+:root {
+    --spotlight-x: 50%;
+    --spotlight-y: 50%;
+    --spotlight-size: 300px; /* spotlight size */
+    --spotlight-basecolor: rgba(245, 245, 220, 0.995); /* Solid beige color */
+}
+
+.landing-page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.landing-page video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-color: var(--spotlight-basecolor); /* Beige background */
+    mask: radial-gradient(circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y), transparent 90%, black 100%);
+    -webkit-mask: radial-gradient(circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y), transparent 90%, black 100%);
+}
+
+.landing-page h1 {
+    font-size: 5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 10;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.2em; 
+}
+
+.landing-page h1:hover  {
+    opacity: 1; /* Reveal text when hovering */
+    color: orangered;
+}
+
+.landing-page h2 {
+    font-size: 1rem; /* Adjust font size as needed */
+    font-family: Arial, sans-serif;
+    z-index: -1;
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    transform: translate(-50%, 0) rotate(-90deg); /* Center horizontally and rotate */
+    transform-origin: center; /* Rotate around the center */
+    color: black;
+    font-weight: bold;
+}
